@@ -15,7 +15,7 @@ Desarrolla la clase `Text` que implemente características similares a la clase 
 - La clase debera contar con la sobre escritura de los operadores `copy asignment` y `move assignment`. complementos de los constructores `copy/move`.
 - La clase debera también sobrecargar el operador `^` que se utilizara para realizar la concatenación entre dos objetos del tipo `Text` o entre un objeto `Text` y un texto almacenado en en un `rvalue` o `lvalue` del tipo `const char*`. También considerar la sobrecarga del operador `^=`.
 - Debera de sobrecargarse el operador ostream (`<<`) y el operador istream (`>>`) 
-- Realizar la sobrecarga del operador = de modo que se pueda asignar el contenido de un objeto del tipo `Text` a un objeto del tipo `std:string` y viceversa.
+- Elaborar el constructor por parámetros del tipo `std::string`, la sobrecarga del operador conversion `string` y el operador `=` de modo que se pueda asignar el contenido de un objeto del tipo `Text` a un objeto del tipo `std:string` y viceversa.
 
 **Use Case #1:** Crear un objeto `Text` e imprimirlo
 ```cpp
@@ -70,14 +70,16 @@ Text text_1;
 std:string text_2;
 Text text_3;
 std:string text_4;
+Text text_5 = string("Hola std::string");   // Constructor x parámetro std::string
 
 std::getline(std::cin, text_1);
 std::getline(std::cin, text_2);
-text_4 = string(text_1);    // Sobrecarga al operador conversion
-text_3 = Text(text_2);      // Constructor x parametro std::string
+text_4 = text_1;                            // Sobrecarga al operador conversión
+text_3 = text_2;                            // Sobrecarga al operador =
 
 std::cout << text_1 << endl;
 std::cout << text_2 << endl;
 std::cout << text_3 << endl;
 std::cout << text_4 << endl;
+std::cout << text_5 << endl;
 ```
