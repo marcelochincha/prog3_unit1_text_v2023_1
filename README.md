@@ -73,8 +73,8 @@ std:string text_4;
 
 std::getline(std::cin, text_1);
 std::getline(std::cin, text_2);
-text_4 = text_1;
-text_3 = text_2;
+text_4 = string(text_1);    // Sobrecarga al operador conversion
+text_3 = Text(text_2);      // Constructor x parametro std::string
 
 std::cout << text_1 << endl;
 std::cout << text_2 << endl;
