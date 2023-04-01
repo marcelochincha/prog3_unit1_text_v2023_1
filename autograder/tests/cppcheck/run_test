@@ -6,7 +6,7 @@
 # src code references
 source='cppcheck.cpp
   ../redirect_io.h 
-  ../Text.h ../Text.cpp
+  ../text.h ../text.cpp
   '
 
 cppcheck ${source} -x c++ --enable=all --verbose --error-exitcode=1 --suppressions-list=suppressions.txt

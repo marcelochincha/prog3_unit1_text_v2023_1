@@ -27,7 +27,7 @@ file(GLOB project_files
 
 add_executable(${PROJECT_NAME}
         ${project_files}
-    )
+        )
 
 if(UNIX AND NOT APPLE)
     find_package(TBB)

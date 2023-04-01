@@ -7,8 +7,8 @@
 
 # src code references
 source_code='
-    ../Text.cpp
-    test_1_1.cpp
+    ../text.cpp
+    test_1.cpp
   '
 
 # compilation command
